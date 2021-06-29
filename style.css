@@ -1,0 +1,22 @@
+
+
+
+.grand-container{
+    margin: auto;
+    width: 550px;
+    height:380px;
+    border: 5px solid grey;
+    text-align: center;
+}
+
+.form-container{
+    font-size: 1.25rem;
+}
+
+.result-container{
+    margin-top: 25px;
+    width:550px;
+    height:150px;
+    border: 1px solid black;
+
+}
