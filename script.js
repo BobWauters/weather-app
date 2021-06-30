@@ -14,14 +14,14 @@
 
 let button = document.querySelector('.button');
 let inputValue = document.querySelector('.inputValue');
-let name = document.querySelector('#name');
+//let name = document.querySelector('#name');
 let desc = document.querySelector('.desc');
 let temp = document.querySelector('.temp');
-let firstDay;
-let secondDay;
-let thirdDay;
-let fourthDay;
-let fifthDay;
+let firstDay = document.querySelector('#day-1');
+let secondDay=document.querySelector('#day-2');
+let thirdDay=document.querySelector('#day-3');
+let fourthDay=document.querySelector('#day-4');
+let fifthDay=document.querySelector('#day-5');
 
 
 
@@ -35,26 +35,39 @@ button.addEventListener('click', function (){
 
 
        .then(data => {
-            let nameValue = data.list[0].weather[0].main;
-            let tempValue = data.list[0].main.temp;
+            let descValue1 = data.list[0].weather[0].main;
+            let tempValue1 = data.list[0].main.temp;
+           let descValue2 = data.list[8].weather[0].main;
+           let tempValue2 = data.list[8].main.temp;
+           let descValue3 = data.list[16].weather[0].main;
+           let tempValue3 = data.list[16].main.temp;
+           let descValue4 = data.list[24].weather[0].main;
+           let tempValue4 = data.list[24].main.temp;
+           let descValue5 = data.list[32].weather[0].main;
+           let tempValue5 = data.list[32].main.temp;
+
+
+           // let nameValue= data.list[4].sys.pod.dt_txt;
           //  console.log (Math.round(data.list[2].main.temp - 273.15) + '&degC')
-            console.log(tempValue);
-            console.log(nameValue);
-            console.log(name)
+            //console.log(tempValue1);
+            //console.log(descValue1);
+           // console.log(nameValue)
 
 
-
-            name.innerHTML= nameValue;
-            temp.innerHTML= tempValue;
-
-
+            //name.innerHTML= nameValue;
+           // desc.innerHTML= descValue;
+            //temp.innerHTML= tempValue;
+            firstDay.innerHTML='Day 1: '+ descValue1 + ' ' + tempValue1;
+           secondDay.innerHTML='Day 2: '+descValue2 + ' ' + tempValue2;
+           thirdDay.innerHTML='Day 3: '+descValue3 + ' ' + tempValue3;
+           fourthDay.innerHTML='Day 4: '+descValue4 + ' ' + tempValue4;
+           fifthDay.innerHTML='Day 5: '+descValue5 + ' ' + tempValue5;
 
         })
 
 
 
-        //.catch(err => alert("An Error Occured"))
-        //.catch(err) {console.log(err);}
+
         .catch(err => {console.log(err)});
 })
 
