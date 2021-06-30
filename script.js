@@ -58,10 +58,10 @@ button.addEventListener('click', function (){
            // desc.innerHTML= descValue;
             //temp.innerHTML= tempValue;
             firstDay.innerHTML='Day 1: '+ descValue1 + ' ' + tempValue1;
-           secondDay.innerHTML='Day 2: '+descValue2 + ' ' + tempValue2;
-           thirdDay.innerHTML='Day 3: '+descValue3 + ' ' + tempValue3;
-           fourthDay.innerHTML='Day 4: '+descValue4 + ' ' + tempValue4;
-           fifthDay.innerHTML='Day 5: '+descValue5 + ' ' + tempValue5;
+           secondDay.innerHTML='Day 2: '+ descValue2 + ' ' + tempValue2;
+           thirdDay.innerHTML='Day 3: '+ descValue3 + ' ' + tempValue3;
+           fourthDay.innerHTML='Day 4: '+ descValue4 + ' ' + tempValue4;
+           fifthDay.innerHTML='Day 5: '+ descValue5 + ' ' + tempValue5;
 
         })
 
