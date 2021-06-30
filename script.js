@@ -32,19 +32,19 @@ button.addEventListener('click', function (){
         .then (response => response.json())
         //.then (data => console.log(data))
 
-
+        //TODO: recheck why fahrenheit to celcius is -273.15
 
        .then(data => {
             let descValue1 = data.list[0].weather[0].main;
-            let tempValue1 = data.list[0].main.temp;
+            let tempValue1 = data.list[0].main.temp = (Math.round(data.list[0].main.temp - 273.15) + '&degC');
            let descValue2 = data.list[8].weather[0].main;
-           let tempValue2 = data.list[8].main.temp;
+           let tempValue2 = data.list[8].main.temp = (Math.round(data.list[8].main.temp - 273.15) + '&degC');
            let descValue3 = data.list[16].weather[0].main;
-           let tempValue3 = data.list[16].main.temp;
+           let tempValue3 = data.list[16].main.temp = (Math.round(data.list[16].main.temp - 273.15) + '&degC');
            let descValue4 = data.list[24].weather[0].main;
-           let tempValue4 = data.list[24].main.temp;
+           let tempValue4 = data.list[24].main.temp = (Math.round(data.list[24].main.temp - 273.15) + '&degC');
            let descValue5 = data.list[32].weather[0].main;
-           let tempValue5 = data.list[32].main.temp;
+           let tempValue5 = data.list[32].main.temp = (Math.round(data.list[32].main.temp - 273.15) + '&degC');
 
 
            // let nameValue= data.list[4].sys.pod.dt_txt;
@@ -70,6 +70,7 @@ button.addEventListener('click', function (){
 
         .catch(err => {console.log(err)});
 })
+
 
 
 // API TRY 1
