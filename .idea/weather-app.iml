@@ -5,5 +5,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="weather-app-V2" />
+    <orderEntry type="module" module-name="weather-app-v3" />
+    <orderEntry type="module" module-name="weather-app-copy-v1" />
   </component>
 </module>

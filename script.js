@@ -28,7 +28,7 @@ let fifthDay=document.querySelector('  #day-5');
 
 //API TRY 2
 button.addEventListener('click', function (){
-    fetch ('https://api.openweathermap.org/data/2.5/forecast?q=' + inputValue.value +'&appid=4ce0604fe97650f47963ef28c9f566d5')
+    fetch ('https://api.openweathermap.org/data/2.5/forecast?q=' + inputValue.value +'&units=metric&appid=4ce0604fe97650f47963ef28c9f566d5')
         .then (response => response.json())
         //.then (data => console.log(data))
 
@@ -36,15 +36,15 @@ button.addEventListener('click', function (){
 
        .then(data => {
             let descValue1 = data.list[0].weather[0].main;
-            let tempValue1 = data.list[0].main.temp = (Math.round(data.list[0].main.temp - 273.15) + '&degC');
+            let tempValue1 = (Math.round(data.list[0].main.temp) + '&degC');
             let descValue2 = data.list[8].weather[0].main;
-            let tempValue2 = data.list[8].main.temp = (Math.round(data.list[8].main.temp - 273.15) + '&degC') ;
+            let tempValue2 = (Math.round(data.list[8].main.temp) + '&degC');
             let descValue3 = data.list[16].weather[0].main;
-            let tempValue3 = data.list[16].main.temp = (Math.round(data.list[16].main.temp - 273.15) + '&degC');
+            let tempValue3 = (Math.round(data.list[16].main.temp) + '&degC');
             let descValue4 = data.list[24].weather[0].main;
-            let tempValue4 = data.list[24].main.temp =(Math.round(data.list[24].main.temp - 273.15) + '&degC');
+            let tempValue4 =(Math.round(data.list[24].main.temp) + '&degC');
             let descValue5 = data.list[32].weather[0].main;
-            let tempValue5 = data.list[32].main.temp =(Math.round(data.list[32].main.temp - 273.15) + '&degC');
+            let tempValue5 =(Math.round(data.list[32].main.temp) + '&degC');
 
                      // &units=metric
                     // let nameValue= data.list[4].sys.pod.dt_txt;
