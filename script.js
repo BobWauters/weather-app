@@ -18,10 +18,10 @@ let inputValue = document.querySelector('.inputValue');
 let desc = document.querySelector('.desc');
 let temp = document.querySelector('.temp');
 let firstDay = document.querySelector('#day-1');
-let secondDay=document.querySelector('#day-2');
-let thirdDay=document.querySelector('#day-3');
-let fourthDay=document.querySelector('#day-4');
-let fifthDay=document.querySelector('#day-5');
+let secondDay=document.querySelector(' #day-2');
+let thirdDay=document.querySelector('  #day-3');
+let fourthDay=document.querySelector(' #day-4');
+let fifthDay=document.querySelector('  #day-5');
 
 
 
@@ -37,31 +37,31 @@ button.addEventListener('click', function (){
        .then(data => {
             let descValue1 = data.list[0].weather[0].main;
             let tempValue1 = data.list[0].main.temp = (Math.round(data.list[0].main.temp - 273.15) + '&degC');
-           let descValue2 = data.list[8].weather[0].main;
-           let tempValue2 = data.list[8].main.temp = (Math.round(data.list[8].main.temp - 273.15) + '&degC');
-           let descValue3 = data.list[16].weather[0].main;
-           let tempValue3 = data.list[16].main.temp = (Math.round(data.list[16].main.temp - 273.15) + '&degC');
-           let descValue4 = data.list[24].weather[0].main;
-           let tempValue4 = data.list[24].main.temp = (Math.round(data.list[24].main.temp - 273.15) + '&degC');
-           let descValue5 = data.list[32].weather[0].main;
-           let tempValue5 = data.list[32].main.temp = (Math.round(data.list[32].main.temp - 273.15) + '&degC');
+            let descValue2 = data.list[8].weather[0].main;
+            let tempValue2 = data.list[8].main.temp = (Math.round(data.list[8].main.temp - 273.15) + '&degC') ;
+            let descValue3 = data.list[16].weather[0].main;
+            let tempValue3 = data.list[16].main.temp = (Math.round(data.list[16].main.temp - 273.15) + '&degC');
+            let descValue4 = data.list[24].weather[0].main;
+            let tempValue4 = data.list[24].main.temp =(Math.round(data.list[24].main.temp - 273.15) + '&degC');
+            let descValue5 = data.list[32].weather[0].main;
+            let tempValue5 = data.list[32].main.temp =(Math.round(data.list[32].main.temp - 273.15) + '&degC');
+
+                     // &units=metric
+                    // let nameValue= data.list[4].sys.pod.dt_txt;
+                   //  console.log (Math.round(data.list[2].main.temp - 273.15) + '&degC')
+                  //console.log(tempValue1);
+                 //console.log(descValue1);
+                // console.log(nameValue)
+               //name.innerHTML= nameValue;
+              // desc.innerHTML= descValue;
+             //temp.innerHTML= tempValue;
 
 
-           // let nameValue= data.list[4].sys.pod.dt_txt;
-          //  console.log (Math.round(data.list[2].main.temp - 273.15) + '&degC')
-            //console.log(tempValue1);
-            //console.log(descValue1);
-           // console.log(nameValue)
-
-
-            //name.innerHTML= nameValue;
-           // desc.innerHTML= descValue;
-            //temp.innerHTML= tempValue;
-            firstDay.innerHTML='Day 1: '+ descValue1 + ' ' + tempValue1;
-           secondDay.innerHTML='Day 2: '+ descValue2 + ' ' + tempValue2;
-           thirdDay.innerHTML='Day 3: '+ descValue3 + ' ' + tempValue3;
-           fourthDay.innerHTML='Day 4: '+ descValue4 + ' ' + tempValue4;
-           fifthDay.innerHTML='Day 5: '+ descValue5 + ' ' + tempValue5;
+           firstDay.innerHTML=' Day 1: <br> '+ descValue1 + ' <br> ' + tempValue1;
+           secondDay.innerHTML='Day 2: <br> '+ descValue2 + '<br> ' + tempValue2;
+           thirdDay.innerHTML=' Day 3: <br>'+ descValue3 + '<br> ' + tempValue3;
+           fourthDay.innerHTML='Day 4: <br>'+ descValue4 + '<br> ' + tempValue4;
+           fifthDay.innerHTML=' Day 5: <br>'+ descValue5 + ' <br>' + tempValue5;
 
         })
 
